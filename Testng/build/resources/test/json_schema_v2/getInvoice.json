@@ -1,0 +1,138 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "endRow": {
+      "type": "integer"
+    },
+    "firstPage": {
+      "type": "integer"
+    },
+    "hasNextPage": {
+      "type": "boolean"
+    },
+    "hasPreviousPage": {
+      "type": "boolean"
+    },
+    "isFirstPage": {
+      "type": "boolean"
+    },
+    "isLastPage": {
+      "type": "boolean"
+    },
+    "lastPage": {
+      "type": "integer"
+    },
+    "list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "companyName": {
+            "type": "string"
+          },
+          "taxNo": {
+            "type": "string"
+          },
+          "registerAddress": {
+            "type": "string"
+          },
+          "registerTel": {
+            "type": "string"
+          },
+          "bank": {
+            "type": "string"
+          },
+          "bankNo": {
+            "type": "string"
+          },
+          "createTime": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "invoiceHeader": {
+            "type": "string"
+          },
+          "invoiceType": {
+            "type": "string"
+          },
+          "mark": {
+            "type": "integer"
+          },
+          "updateTime": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "companyName",
+          "taxNo",
+          "registerAddress",
+          "registerTel",
+          "bank",
+          "bankNo",
+          "createTime",
+          "id",
+          "invoiceHeader",
+          "invoiceType",
+          "mark",
+          "updateTime"
+        ]
+      }
+    },
+    "navigatePages": {
+      "type": "integer"
+    },
+    "navigatepageNums": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "nextPage": {
+      "type": "integer"
+    },
+    "pageNum": {
+      "type": "integer"
+    },
+    "pageSize": {
+      "type": "integer"
+    },
+    "pages": {
+      "type": "integer"
+    },
+    "prePage": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "integer"
+    },
+    "startRow": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "endRow",
+    "firstPage",
+    "hasNextPage",
+    "hasPreviousPage",
+    "isFirstPage",
+    "isLastPage",
+    "lastPage",
+    "list",
+    "navigatePages",
+    "navigatepageNums",
+    "nextPage",
+    "pageNum",
+    "pageSize",
+    "pages",
+    "prePage",
+    "size",
+    "startRow",
+    "total"
+  ]
+}

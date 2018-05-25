@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "integer"
+    },
+    "info": {
+      "type": "string"
+    },
+    "des": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "code",
+    "info",
+    "des"
+  ]
+}

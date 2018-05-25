@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "createTime": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "invoiceHeader": {
+          "type": "string"
+        },
+        "invoiceType": {
+          "type": "string"
+        },
+        "mark": {
+          "type": "integer"
+        },
+        "updateTime": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "createTime",
+        "id",
+        "invoiceHeader",
+        "invoiceType",
+        "mark",
+        "updateTime"
+      ]
+    },
+    "status": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "data",
+    "status"
+  ]
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--suite定义一个测试套件-->
+<suite name="API automation suite" parallel="tests" thread-count="3">
+    <!--verbose表示日志级别，preserve-order控制@Test标识的测试用例的执行顺序，默认false，无序-->
+    <test name="test0" preserve-order="true" verbose="2" time-out="15000">
+        <classes>
+            <class name="v2.AuthCode"></class>
+            <class name="v2.DeliveryAddress"></class>
+            <class name="v2.Passport"></class>
+            <class name="v2.MixOperate"></class>
+            <class name="v2.Invoice"></class>
+            <class name="v2.ThirdLogin"></class>
+        </classes>
+    </test>
+
+    <test name="test1" preserve-order="true" verbose="2" time-out="15000">
+        <classes>
+            <class name="v2.AuthCode"></class>
+            <class name="v2.DeliveryAddress"></class>
+            <class name="v2.Passport"></class>
+            <class name="v2.MixOperate"></class>
+            <class name="v2.Invoice"></class>
+            <class name="v2.ThirdLogin"></class>
+        </classes>
+    </test>
+
+    <test name="test2" preserve-order="true" verbose="2" time-out="15000">
+        <classes>
+            <class name="v2.AuthCode"></class>
+            <class name="v2.DeliveryAddress"></class>
+            <class name="v2.Passport"></class>
+            <class name="v2.MixOperate"></class>
+            <class name="v2.Invoice"></class>
+            <class name="v2.ThirdLogin"></class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,58 @@
+group 'com.me.hyh'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+repositories {
+    mavenCentral()
+    maven { url "http://10.3.30.59:8081/nexus/content/groups/public/"}
+    maven { url "http://repo.jenkins-ci.org/public/"}
+}
+
+dependencies {
+    compile 'com.alibaba:fastjson:1.2.11'
+    compile fileTree(dir:'lib',include:['*.jar'])
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile "com.jayway.restassured:rest-assured:2.9.0"
+    testCompile "org.testng:testng:6.8.8"
+    testCompile "io.rest-assured:json-schema-validator:3.0.0"
+}
+
+tasks.withType(JavaCompile) {
+    options.setEncoding("UTF-8")
+}
+
+task testNG(type: Test) {
+    useTestNG {}
+    options.suites("src/test/resources/Testng.xml")
+    reports.html.destination = file("$buildDir/reports/testng")
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test: " + descriptor)
+    }
+    onOutput { descriptor, event ->
+        logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message)
+    }
+}
+
+task testNG_v1(type: Test) {
+    useTestNG {}
+    options.suites("src/test/resources/Testng_v1.xml")
+    reports.html.destination = file("$buildDir/reports/testng_v1")
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test of v1: " + descriptor)
+    }
+    onOutput { descriptor, event ->
+        logger.lifecycle("Test_v1: " + descriptor + " produced standard out/err: " + event.message)
+    }
+}
